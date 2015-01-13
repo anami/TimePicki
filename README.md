@@ -2,7 +2,6 @@ TimePicki
 =========
 
 Based on the non-keyboard friendly version of the TimePicki jQuery plugin originally developed by Senthil Raj 
-###[Click to see Demo](http://senthilraj.github.io/TimePicki/)
 
 It is Time picker plugin based on jQuery. The primary reason for developing it was to allow users of mobiles to easily enter times in text boxes.
 It was also developed to target the 1.5.1 version of jQuery which was initially supplied with ASP.NET MVC2 projects. The plugin is suitable for any jQuery version after 1.5.1
