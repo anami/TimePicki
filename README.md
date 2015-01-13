@@ -9,8 +9,8 @@ It was also developed to target the 1.5.1 version of jQuery which was initially 
 How to use
 ==========
 
-- 1)Include jQuery plugin and TimePicki Plugin
-- 2)Call Timepicki function with input element selector
+- 1) Include jQuery and TimePicki Plugin
+- 2) Call Timepicki function with input element selector
 
 ```html
 <script src="js/jquery.js"></script>
@@ -22,12 +22,12 @@ How to use
 </script>
 ```
 
-- 3)Write a time input like something below::
+- 3) Write a time input field like something below::
 ```html
 <input type="text" name="timepicker" class="time_element"/>
 ```        
 
-- 4)Add the CSS stylesheet for TimePicki
+- 4) Add the CSS stylesheet for TimePicki
 ```html
 <link rel="stylesheet" type="text/css" href="css/timepicki.css">
 ```
