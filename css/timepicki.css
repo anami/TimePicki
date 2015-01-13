@@ -5,6 +5,7 @@ Author: senthil
 
 .ti_tx,
 .mi_tx,
+.se_tx,
 .mer_tx {
 	width: 100%;
 	text-align: center;
@@ -13,6 +14,7 @@ Author: senthil
 
 .time,
 .mins,
+.secs,
 .meridian {
 	width: 60px;
 	float: left;
@@ -66,12 +68,26 @@ Author: senthil
 	left: 0;
 }
 
+.with-seconds .timepicker_wrap { width: 320px; }
+
+.timepicker_wrap input { width: 100%; }
+
 .arrow_top {
 	position: absolute;
 	top: -10px;
 	left: 20px;
-	background: url(../images/top_arr.png) no-repeat;
+	background: url("../images/top_arr.png") no-repeat;
 	width: 18px;
 	height: 10px;
 	z-index: 3;
 }
+
+.secs,
+.mins { position: relative; }
+
+.secs::before,
+.mins::before { 
+content: ":";
+display: inline-block;
+position: absolute;
+top: 39%; left: -20%}
