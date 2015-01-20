@@ -1,6 +1,5 @@
 /* 
-Created on: 17 Sep, 2014, 4:29:37 PM
-Author: senthil
+	TimePicki CSS
 */
 
 .ti_tx,
@@ -18,7 +17,7 @@ Author: senthil
 .meridian {
 	width: 60px;
 	float: left;
-	margin: 0 10px;
+	margin: 0 15px 0 0;;
 	font-size: 20px;
 	color: #2d2e2e;
 	font-family: arial;
@@ -68,7 +67,7 @@ Author: senthil
 	left: 0;
 }
 
-.with-seconds .timepicker_wrap { width: 320px; }
+.with-seconds .timepicker_wrap { width: 300px; }
 
 .timepicker_wrap input { width: 100%; }
 
@@ -90,4 +89,18 @@ Author: senthil
 content: ":";
 display: inline-block;
 position: absolute;
-top: 39%; left: -20%}
+top: 39%; left: -15%}
+
+.close-timepicker {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	color: #333;
+	text-decoration: none;
+	font-size: 16pt;
+	cursor: pointer;
+}
+
+.close-timepicker:hover {
+	color: #111; 
+}
