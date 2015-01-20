@@ -174,9 +174,7 @@
 
 		// click add event to open the popup...
 		this.element.bind("click", $.proxy(this.toggleView, this));
-		
-		// position the picker
-		this.picker.css("top", this.element.outerHeight() + "px").css("left", this.element.position().left + "px");		
+				
 
 		// bind the click events
 		this.picker.find('.action-next').bind("click", $.proxy(this.change, this));
@@ -415,6 +413,10 @@
 	// Open/show the picker.
 	TimePicki.prototype.open = function(e) {
 		this.displayed = true;
+	
+		// position the picker
+		this.picker.css("top", this.element.outerHeight() + "px").css("left", this.element.position().left + "px");
+
 		this.picker.fadeIn("fast");
 		self = this;
 		
@@ -438,11 +440,17 @@
 
 		this.set_date(input_time);
 
+		// scroll into view
+		$('html body').animate({ scrollTop : this.picker.offset().top + 300}, 1000);
+
 		// unfocus so it can clicked again
 		this.element.blur();
 
 		// hide all the other timepickers
-		$doc.find('.time_pick').not(this.parent).find('input').data('timepicki').close();
+		console.log($doc.find('.time_pick').not(this.parent).find('input').length);
+		$doc.find('.time_pick').not(this.parent).find('input').each(function(index){
+			$(this).data('timepicki').close()
+		});
 
 	};
 
@@ -451,6 +459,7 @@
 		this.displayed = false;
 		this.picker.fadeOut();
 
+		console.log('closing picker... ' + this.id);
 		// unfocus so it can be clicked again.
 		this.element.blur();
 	};

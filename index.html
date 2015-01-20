@@ -5,24 +5,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Timepicker, Timepicki, jquery, plugin, jqueryplugin">
-        <meta name="description" content="Timepicki is a free Time picker jquery plugin, it is simple and clean timepicker so user can understand to set time for your project in input forms.">
+        <meta name="description" content="Timepicki is a simple jQuery based time picker control.">
         <meta name="author" content="anami">
         <link rel="stylesheet" type="text/css" href="css/timepicki.css"/>
         <style>
-            body{ font-family: 'arial'}
-            a{ text-decoration: none; color: #66666B;}
-            a span{ font-size: 12px;}
+            body{ font-family: Helvetica, Arial, sans-serif; background-color: #666; color: #fff;}
+			h1, h2 { font-weight: 100; }
+            a{ text-decoration: none; color: blue; text-shadow: 0 1px #000;}
+            a span{ font-size: 14pt;}
             input[name^=time] { margin: 0px 30px; font-size: 16pt; line-height: 2em; float: left;}
         </style>
     </head>
     <body>
-        <h1>Timepicki - free Time picker jquery plugin - <a href="https://github.com/anami/TimePicki/">Download <span>- more details</span></a></h1> 
-        <p>Timepicki is a free Time picker jquery plugin, it is simple and clean timepicker so user can understand to set time for your project in input forms.</p>
-        <p>Reason to make : I have tried to search set timepicker for one of the form page, this type of timepicker only on boostrap framework as bootsstrap-timepicker, but if we use that plugin then also need to use bootstrap css and js, so that will conflict our own code css and some time make js conflict issue, that why i make it simple, so you can use easily with jquery library 1.x and 2.x too, if you find any issue or need any additional features in this plugin , kindly reach me on my mail(I mentioned on bottom of the page)</p>
+		<header>
+        		<h1>Timepicki</h1>
+			<h2>A simple jQuery based time picker control plugin</h2>
+		</header>
+	<a href="https://github.com/anami/TimePicki/">Download <span>- more details</span></a>
+        <p>Timepicki is a simple and free time picker jQuery plugin, it has been tested to run on jQuery 1.5 onwards</p>
+	<p>It has been designed to be mobile/tablet friendly, disabling the on-screen keyboard when it is opened and improved touch handling</p>
+	<p>It has been tested on an iPad, Android (built in browser and Chrome) and of course desktop browsers</p>
         <input type="text" name="time"/>
 	<input type="text" name="time2" />
+	<div>
+		<input type="text" name="time3" />
+	</div>
+	<footer>
         <p>Developed by <a href="https://github.com/anami">anami</a></p>
-        <!--<div class='timepicker_wrap' style="display: block; top: 151px; left: 110px;"><div class="arrow_top"></div><div class='time'><div class='prev'></div><div class='ti_tx'>12</div><div class='next'></div></div><div class='mins'><div class='prev'></div><div class='mi_tx'>28</div><div class='next'></div></div><div class='meridian'><div class='prev'></div><div class='mer_tx'>AM</div><div class='next'></div></div></div>-->
+	</footer>
         <!--<script src="https://code.jquery.com/jquery-2.1.1.min.js">
         </script>-->
         <script src="https://code.jquery.com/jquery-1.5.1.min.js">
