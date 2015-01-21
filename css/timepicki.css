@@ -102,7 +102,9 @@ top: 39%; left: -15%}
 	text-decoration: none;
 	font-size: 16pt;
 	cursor: pointer;
-	content: url(../images/cross.svg);
+	background: url(../images/cross.svg) no-repeat center center;
+	width: 20px;
+	height: 20px;
 }
 
 .close-timepicker:hover {

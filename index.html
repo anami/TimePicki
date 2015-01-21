@@ -15,7 +15,7 @@
             a{ text-decoration: none; color: blue; text-shadow: 0 1px #000;}
             	
             a span{ font-size: 14pt;}
-            input[name^=time] { margin: 0px 30px; font-size: 16pt; line-height: 2em; float: left;}
+            input[name^=time], input[name^=notime] { margin: 0px 30px; font-size: 16pt; line-height: 2em; float: left;}
         </style>
     </head>
     <body>
@@ -27,10 +27,13 @@
         <p>Timepicki is a simple and free time picker jQuery plugin, it has been tested to run on jQuery 1.5 onwards up to 2.1 (currently)</p>
 	<p>It has been designed to be mobile/tablet friendly, disabling the on-screen keyboard when it is opened and having improved touch handling. It is also designed to be completely inclusive with jQuery being its only dependency.</p>
 	<p>It has been tested on an iPad, Android (built in browser and Chrome) and of course desktop browsers (Firefox, Safari, Internet Explorer and Chrome)</p>
-        <input type="text" name="time"/>
-	<input type="text" name="time2" />
+    <input type="text" name="time1" class="empty-time"/>
+	<input type="text" name="time2" class="empty-time" />
 	<div>
-		<input type="text" name="time3" />
+		<input type="text" name="time3" value="12:34:57 PM" />
+	</div>
+	<div>
+		<input type="text" name="time4" value="12:34 AM" />
 	</div>
 	<footer>
         <p>Developed by <a href="https://github.com/anami">anami</a></p>
@@ -42,9 +45,9 @@
         <script src="js/timepicki.js">
         </script>
         <script>
-            $("input[name='time']").timepicki();
-            $("input[name='time2']").timepicki();
-            $("input[name='time3']").timepicki({'show_seconds' : false});
+            $("input.empty-time").timepicki();
+            $("input[name='time3']").timepicki();
+            $("input[name='time4']").timepicki({'show_seconds' : false});
             
         </script>
     </body>
