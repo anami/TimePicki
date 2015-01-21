@@ -155,7 +155,7 @@
 					"<div class='mer_tx'></div>" +
 					bottom_arrow_button +
 				"</div>" +
-				"<div class=\"close-timepicker\">x</div>" +
+				"<div class=\"close-timepicker\"></div>" +
 			"</div>";
 
 		if (options.show_seconds) {

@@ -31,7 +31,7 @@
 	width: 28%;
 	border: 1px solid #ccc;
 	margin: auto;
-	background: url(../images/arrow.png) no-repeat;
+	/*background: url(../images/arrow.png) no-repeat;*/
 	border-radius: 5px;
 }
 
@@ -41,11 +41,13 @@
 }
 
 .next {
-	background-position: 50% 150%;
+	/*background-position: 50% 150%;*/
+	background: url(../images/down_arrow.svg) no-repeat center center;
 }
 
 .prev {
-	background-position: 50% -50%;
+	/*background-position: 50% -50%;*/
+	background: url(../images/up_arrow.svg) no-repeat center center;
 }
 
 .time_pick {
@@ -95,13 +97,14 @@ top: 39%; left: -15%}
 .close-timepicker {
 	position: absolute;
 	top: 3px;
-	right: 10px;
+	right: 3px;
 	color: #333;
 	text-decoration: none;
 	font-size: 16pt;
 	cursor: pointer;
+	content: url(../images/cross.svg);
 }
 
 .close-timepicker:hover {
-	color: #111; 
+	opacity: 0.7;
 }
