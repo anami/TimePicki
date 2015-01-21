@@ -418,7 +418,6 @@
 		this.picker.css("top", this.element.outerHeight() + "px").css("left", this.element.position().left + "px");
 
 		this.picker.fadeIn("fast");
-		self = this;
 		
 		var input_time;
 
@@ -447,7 +446,6 @@
 		this.element.blur();
 
 		// hide all the other timepickers
-		console.log($doc.find('.time_pick').not(this.parent).find('input').length);
 		$doc.find('.time_pick').not(this.parent).find('input').each(function(index){
 			$(this).data('timepicki').close()
 		});
