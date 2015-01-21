@@ -91,7 +91,7 @@
 		// preset time used when 'start_time_origin' is set to 'preset'
 		preset_start_time: undefined,
 		// show seconds in the control
-		show_seconds: true,
+		show_seconds: false,
 		// the 'up' buttons increase the value - 'down' buttons to increase the value 
 		increase_direction: 'up',
 		// custom CSS classes 
