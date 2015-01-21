@@ -31,7 +31,6 @@
 	width: 28%;
 	border: 1px solid #ccc;
 	margin: auto;
-	/*background: url(../images/arrow.png) no-repeat;*/
 	border-radius: 5px;
 }
 
@@ -41,12 +40,10 @@
 }
 
 .next {
-	/*background-position: 50% 150%;*/
 	background: url(../images/down_arrow.svg) no-repeat center center;
 }
 
 .prev {
-	/*background-position: 50% -50%;*/
 	background: url(../images/up_arrow.svg) no-repeat center center;
 }
 
