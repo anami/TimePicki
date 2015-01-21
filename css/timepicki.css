@@ -70,19 +70,34 @@
 	text-shadow: none;
 }
 
+
+.arrow_top:after, .arrow_top:before {
+	bottom: 100%;
+	left: 15%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_top:after {
+	border-color: transparent;
+	border-bottom-color: #f6f6f6;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.arrow_top:before {
+	border-color: transparent;
+	border-bottom-color: rgba(50,50,50,0.35);
+	border-width: 16px;
+	margin-left: -16px;
+}
+
 .with-seconds .timepicker_wrap { width: 300px; }
 
 .timepicker_wrap input { width: 100%; }
-
-.arrow_top {
-	position: absolute;
-	top: -10px;
-	left: 20px;
-	background: url("../images/top_arr.png") no-repeat;
-	width: 18px;
-	height: 10px;
-	z-index: 3;
-}
 
 .secs,
 .mins { position: relative; }

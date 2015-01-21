@@ -415,7 +415,7 @@
 		this.displayed = true;
 	
 		// position the picker
-		this.picker.css("top", this.element.outerHeight() + "px").css("left", this.element.position().left + "px");
+		this.picker.css("top", (this.element.outerHeight() + 10) + "px").css("left", this.element.position().left + "px");
 
 		this.picker.fadeIn("fast");
 		
@@ -440,7 +440,7 @@
 		this.set_date(input_time);
 
 		// scroll into view
-		$('html body').animate({ scrollTop : this.picker.offset().top + 300}, 1000);
+		//$('html body').animate({ scrollTop : this.picker.offset().top + 300}, 1000);
 
 		// unfocus so it can clicked again
 		this.element.blur();
