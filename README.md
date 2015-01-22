@@ -1,4 +1,4 @@
-TimePicki
+TimePickr
 =========
 
 Based on the non-keyboard friendly version of the TimePicki jQuery plugin originally developed by Senthil Raj 
@@ -9,15 +9,15 @@ It was also developed to target the 1.5.1 version of jQuery which was initially 
 How to use
 ==========
 
-- 1) Include jQuery and TimePicki Plugin
-- 2) Call Timepicki function with input element selector
+- 1) Include jQuery and TimePickr Plugin
+- 2) Call timepickr function with input element selector
 
 ```html
 <script src="js/jquery.js"></script>
-<script src="js/timepicki.js"></script>
+<script src="js/timepickr.js"></script>
 <script>
   $(document).ready(function(){
-    $(".time_element").timepicki();
+    $(".time_element").timepickr();
   });
 </script>
 ```
@@ -27,36 +27,10 @@ How to use
 <input type="text" name="timepicker" class="time_element"/>
 ```        
 
-- 4) Add the CSS stylesheet for TimePicki
+- 4) Add the CSS stylesheet for TimePickr
 ```html
-<link rel="stylesheet" type="text/css" href="css/timepicki.css">
+<link rel="stylesheet" type="text/css" href="css/timepickr.css">
 ```
-<<<<<<< HEAD
-=======
-features and options
-====================
-if you need to know about timepicki features and options to [Click here](http://senthilraj.github.io/TimePicki/)
-## Demo
-
-###[Click to see Demo](http://senthilraj.github.io/TimePicki/)
 
 
-## Download
 
-### Download [ScrollNaviJs zip archive](https://github.com/senthilraj/TimePicki/archive/master.zip)
-
-
-About me
-========
- I am senthil and I am 23 years old designer and developer specialised in UserInterface. I am doing rich websites and creating Hybrid mobile apps, any doubts, need to make plugin or add addtional feature in this plugin feel free to catch me on Mail: senthil2rajan@gmail.com
-
-Website: http://senthilraj.github.io/resume/
-
-Add your Website
-================
-
-if you are using our plugin, we will add in here as plugin users with website link,
-so kindly send me your website link to this MailId : senthil2rajan@gmail.com 
-
-Thanks
->>>>>>> FETCH_HEAD
