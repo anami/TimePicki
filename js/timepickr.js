@@ -1,24 +1,24 @@
 /*
-*	TimePicki - jquery timepicker addon 
-*	
+*	TimePickr - jquery timepicker addon 
+*	Based upon TimePicki by Senthil (https://github.com/senthilraj/TimePicki)
 */
 
 (function($){
 	
 	// ENTRY POINT
-	// Extend $.fn.timepicki
-	$.fn.timepicki = function(opts) {
+	// Extend $.fn.timepickr
+	$.fn.timepickr = function(opts) {
 		var args = Array.prototype.slice.call(arguments, 1);
 		return this.each(function(){
 			var $this = $(this),
-				data = $this.data('timepicki');
+				data = $this.data('timepickr');
 			if (! data) {
-				var options = $.extend({}, TimePicki.DEFAULTS, $this.data(), typeof opts == 'object' && opts);
-				$this.data('timepicki', new TimePicki($this, options));
+				var options = $.extend({}, TimePickr.DEFAULTS, $this.data(), typeof opts == 'object' && opts);
+				$this.data('timepickr', new TimePickr($this, options));
 			} else {
 				// Manual operations. show, hide, remove, e.g.
 				if (typeof data[opts] === 'function') {
-					data[option].apply(data, args);
+					data[opts].apply(data, args);
 				}
 			}
 		});
@@ -48,8 +48,8 @@
 	}
 
 	// LOGIC
-	// TimePicki defaults
-	TimePicki.DEFAULTS = {
+	// TimePickr defaults
+	TimePickr.DEFAULTS = {
 		// format the output as a string.
 		format_output: function(tim, mini, secs, meri, show_seconds) {
 			if (show_seconds) {
@@ -100,8 +100,8 @@
 		no_keyboard: true
 	};
 	
-	// TimePicki class
-	function TimePicki(element, options) {
+	// TimePickr class
+	function TimePickr(element, options) {
 		var isInput = element.attr("tagName") === "INPUT",
 			input = isInput ? element : element.find("input");
 
@@ -184,18 +184,18 @@
 		this.picker.find('.action-next').bind("touchstart", this.touch);
 		this.picker.find('.action-prev').bind("touchstart", this.touch);
 
-	}//end of TimePicki class
+	}//end of TimePickr class
 
 	// Set the initial time value;
-	TimePicki.prototype.set_date = function(start_time) {
+	TimePickr.prototype.set_date = function(start_time) {
 		var d, ti, mi, se, mer, ele = this.element;
 
 		// if a value was already picked we will remember that value
-		if (ele.is('[data-timepicki-tim]')) {
-			ti = Number(ele.attr('data-timepicki-tim'));
-			mi = Number(ele.attr('data-timepicki-mini'));
-			se = Number(ele.attr('data-timepicki-secs'));
-			mer = ele.attr('data-timepicki-meri');
+		if (ele.is('[data-timepickr-tim]')) {
+			ti = Number(ele.attr('data-timepickr-tim'));
+			mi = Number(ele.attr('data-timepickr-mini'));
+			se = Number(ele.attr('data-timepickr-secs'));
+			mer = ele.attr('data-timepickr-meri');
 
 		// developer can specify a custom starting value
 		} else if (typeof start_time === 'object') {
@@ -229,13 +229,13 @@
 	};
 
 	// Arrow click handler.
-	TimePicki.prototype.change = function(e) {
+	TimePickr.prototype.change = function(e) {
 		this.click(e);
 		this.set_value(e);	
 	};
 
 	// Touch event handler
-	TimePicki.prototype.touch = function(e) {
+	TimePickr.prototype.touch = function(e) {
 		var t2 = e.timeStamp
       		, t1 = $(this).data('lastTouch') || t2
       		, dt = t2 - t1
@@ -250,7 +250,7 @@
 	};
 
 	// Update value
-	TimePicki.prototype.set_value = function(e) {
+	TimePickr.prototype.set_value = function(e) {
 		var tim = this.picker.find(".ti_tx").text(),
 	    		mini = this.picker.find(".mi_tx").text(),
 	    		secs = this.picker.find(".se_tx").text(),
@@ -265,10 +265,10 @@
 
 			// store the value so we can set the initial value
 			// next time the picker is opened
-			this.element.attr('data-timepicki-tim', tim);
-			this.element.attr('data-timepicki-mini', mini);
-			this.element.attr('data-timepicki-secs', secs);
-			this.element.attr('data-timepicki-meri', meri);
+			this.element.attr('data-timepickr-tim', tim);
+			this.element.attr('data-timepickr-mini', mini);
+			this.element.attr('data-timepickr-secs', secs);
+			this.element.attr('data-timepickr-meri', meri);
 
 			// set the formatted value
 			this.element.val(this.options.format_output(tim, mini, secs, meri, this.options.show_seconds));
@@ -276,7 +276,7 @@
 	};
 
 	// Click handler
-	TimePicki.prototype.click = function(e) {
+	TimePickr.prototype.click = function(e) {
 		var cur_ele = $(e.target);
 		var ele_next = this.picker;
 		var cur_cli = null;
@@ -411,7 +411,7 @@
 	};
 
 	// Open/show the picker.
-	TimePicki.prototype.open = function(e) {
+	TimePickr.prototype.open = function(e) {
 		this.displayed = true;
 	
 		// position the picker
@@ -447,13 +447,13 @@
 
 		// hide all the other timepickers
 		$doc.find('.time_pick').not(this.parent).find('input').each(function(index){
-			$(this).data('timepicki').close()
+			$(this).data('timepickr').close()
 		});
 
 	};
 
 	// Close the picker
-	TimePicki.prototype.close = function(e) {
+	TimePickr.prototype.close = function(e) {
 		this.displayed = false;
 		this.picker.fadeOut();
 
@@ -462,11 +462,27 @@
 		this.element.blur();
 	};
 
-	TimePicki.prototype.toggleView = function(e) {
+	// Toggle picker
+	TimePickr.prototype.toggleView = function(e) {
 		this[this.displayed ? "close" : "open"](e);		
 	};
 
-	TimePicki.prototype.remove = function() {
+	// Removes the timepickr
+	TimePickr.prototype.remove = function() {
+		this.element.removeData('timepickr');
+
+		//unbind events
+		this.element.unbind();
+		this.picker.find('.action-next').unbind();
+		this.picker.find('.action-prev').unbind();
+		this.picker.find('.close-timepicker').unbind();
+
+		if (this.isShown) {
+			this.hide();
+		}
+
+		// unwrap
+		this.element.unwrap();
 	};
 
 })(jQuery);
