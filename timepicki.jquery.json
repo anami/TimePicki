@@ -1,39 +1,35 @@
 {
-    "name": "timepicki",
-    "title": "Timepicki jQuery Timepicker",
-    "description": "Time picker plugin based on jQuery",
+    "name": "timepickr",
+    "title": "Timepickr jQuery Timepicker",
+    "description": "A finger friendly Time picker plugin based on jQuery",
     "keywords": [
         "Timepicker",
-        "Timepicki",
+        "Timepickr",
         "Time"
     ],
-<<<<<<< HEAD
-    "version": "1.0",
-=======
     "version": "2.0",
->>>>>>> FETCH_HEAD
     "author": {
         "name": "Developed by anami",
-        "url": "https://github.com/anami/TimePicki"
+        "url": "https://github.com/anami/TimePickr"
     },
     "maintainers": [
         {
             "name": "anami",
             "email": "",
-            "url": "https://github.com/anami/TimePicki"
+            "url": "https://github.com/anami/TimePickr"
         }
     ],
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/anami/TimePicki/LICENSE.txt"
+            "url": "https://github.com/anami/TimePickr/LICENSE.txt"
         }
     ],
-    "bugs": "https://github.com/anami/TimePicki/issues",
-    "homepage": "https://github.com/anami/TimePicki",
-    "docs": "https://github.com/anami/TimePicki",
-    "download": "https://github.com/anami/TimePicki#download",
-    "demo": "",
+    "bugs": "https://github.com/anami/TimePickr/issues",
+    "homepage": "https://anami.github.com/TimePickr",
+    "docs": "https://github.com/anami/TimePickr",
+    "download": "https://github.com/anami/TimePickr#download",
+    "demo": "https://anami.github.com/TimePickr",
     "dependencies": {
         "jquery": ">=1.x"
     }
